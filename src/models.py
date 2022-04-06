@@ -28,8 +28,6 @@ class User(Base):
         pass
 class item(Base):
     __abstract__ = True
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     name = Column(String(256), nullable=False)
 
@@ -59,8 +57,6 @@ class Planet(item):
 
 class Character(item):
     __tablename__ = 'character'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
     height =Column(String(80), nullable=False)
     mass = Column(String(80), nullable=False)
     eye_color = Column(String(40), nullable=False)
